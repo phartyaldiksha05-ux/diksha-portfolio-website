@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diksha Phartyal — AI/ML & Backend Developer</title>
+<meta name="description" content="Diksha Phartyal — AI/ML & Backend Developer. MCA graduate, builder of a live multilingual RAG chatbot serving 300+ students, and data/ML projects.">
+
+<!-- Open Graph / LinkedIn, WhatsApp, etc. link preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Diksha Phartyal — AI/ML & Backend Developer">
+<meta property="og:description" content="MCA graduate who built a live multilingual RAG chatbot serving 300+ students across 4 languages. Explore projects, skills, and experience.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://your-deployed-link-here.vercel.app">
+
+<!-- Twitter/X card (harmless to include, some tools use it as fallback) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Diksha Phartyal — AI/ML & Backend Developer">
+<meta name="twitter:description" content="MCA graduate who built a live multilingual RAG chatbot serving 300+ students across 4 languages.">
+<meta name="twitter:image" content="assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#08080D;
+    --bg-2:#0F0F17;
+    --card:#131320;
+    --card-2:#171724;
+    --line:#24243A;
+    --ink:#F3F3F8;
+    --ink-soft:#B7B7C9;
+    --slate:#7C7C93;
+
+    --blue:#4D7CFF;
+    --blue-soft:#1B2340;
+    --pink:#FF4FA3;
+    --pink-soft:#3A1830;
+    --grad: linear-gradient(90deg, var(--blue), var(--pink));
+
+    --display:'Space Grotesk', 'Inter', sans-serif;
+    --body:'Inter', -apple-system, sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+
+    --maxw:1160px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg,canvas{display:block; max-width:100%;}
+  a{color:inherit; text-decoration:none;}
+  ul{margin:0; padding:0; list-style:none;}
+  h1,h2,h3{font-family:var(--display); margin:0; font-weight:700;}
+  p{margin:0;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  section{position:relative;}
+  ::selection{background:var(--pink); color:#fff;}
+  :focus-visible{outline:2.5px solid var(--blue); outline-offset:3px;}
+
+  .grad-text{
+    background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--pink);
+    display:flex; align-items:center; gap:8px;
+  }
+  .eyebrow .dot{width:6px; height:6px; border-radius:50%; background:var(--pink); box-shadow:0 0 8px var(--pink);}
+
+  /* ---------------- NAV ---------------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(8,8,13,.78);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{display:flex; align-items:center; justify-content:space-between; height:68px;}
+  .brand{font-family:var(--display); font-weight:700; font-size:19px; display:flex; align-items:center; gap:9px;}
+  .brand .brand-dot{width:9px; height:9px; border-radius:50%; background:var(--blue); box-shadow:0 0 10px var(--blue);}
+  .navlinks{display:flex; align-items:center; gap:30px;}
+  .navlinks a{font-size:14.5px; font-weight:500; color:var(--ink-soft); padding:6px 2px; border-bottom:2px solid transparent; transition:border-color .15s, color .15s;}
+  .navlinks a:hover{color:var(--ink); border-color:var(--pink);}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--body); font-weight:600; font-size:14px;
+    padding:11px 22px; border-radius:100px;
+    cursor:pointer; border:1.5px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:active{transform:scale(.97);}
+  .btn-primary{background:var(--grad); color:#fff;}
+  .btn-primary:hover{box-shadow:0 8px 26px rgba(255,79,163,.35); transform:translateY(-1px);}
+  .btn-ghost{border-color:var(--line); color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--blue); background:rgba(77,124,255,.08);}
+
+  .navtoggle{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+  .navtoggle span{display:block; width:22px; height:2px; background:var(--ink); margin:5px 0; transition:.2s;}
+
+  /* ---------------- HERO ---------------- */
+  .hero{padding:72px 0 64px; overflow:hidden;}
+  .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:48px; align-items:center;}
+  .hero h1{font-size:clamp(40px, 5.6vw, 66px); line-height:1.02; letter-spacing:-.02em; margin:18px 0 20px;}
+  .live-badge{
+    display:inline-flex; align-items:center; gap:9px;
+    background:var(--card); border:1px solid var(--line);
+    padding:8px 16px 8px 12px; border-radius:100px;
+    font-family:var(--mono); font-size:12.5px; color:var(--ink-soft);
+    margin-bottom:24px;
+  }
+  .live-dot{width:8px; height:8px; border-radius:50%; background:#2FE398; position:relative;}
+  .live-dot::after{content:''; position:absolute; inset:-5px; border-radius:50%; border:1.5px solid #2FE398; animation:pulse 2s ease-out infinite;}
+  @keyframes pulse{0%{transform:scale(.6); opacity:.9;} 100%{transform:scale(1.9); opacity:0;}}
+  @keyframes blink{0%,80%,100%{opacity:.25;} 40%{opacity:1;}}
+  .hero p.lede{font-size:17.5px; color:var(--ink-soft); max-width:500px; margin-bottom:32px;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:44px;}
+  .stat-chips{display:flex; gap:10px; flex-wrap:wrap;}
+  .chip{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 16px; min-width:108px;}
+  .chip .n{font-family:var(--display); font-weight:700; font-size:21px;}
+  .chip .l{font-size:11.5px; color:var(--slate); margin-top:2px;}
+
+  /* ---- hero chatbot mockup (signature visual) ---- */
+  .hero-visual{position:relative;}
+  .glow{position:absolute; width:340px; height:340px; border-radius:50%; filter:blur(90px); opacity:.35; z-index:0;}
+  .glow.blue{background:var(--blue); top:-40px; left:-40px;}
+  .glow.pink{background:var(--pink); bottom:-40px; right:-20px;}
+  .chat-shot{position:relative; z-index:1; border-radius:20px; overflow:hidden; border:1px solid var(--line); box-shadow:0 30px 70px rgba(0,0,0,.55);}
+  .chat-shot img{width:100%; display:block;}
+  .shot-badge{
+    position:absolute; left:14px; bottom:14px;
+    display:inline-flex; align-items:center; gap:7px;
+    font-family:var(--mono); font-size:11.5px; font-weight:500;
+    background:rgba(8,8,13,.78); backdrop-filter:blur(6px);
+    color:var(--ink); border:1px solid rgba(255,255,255,.18);
+    padding:7px 13px; border-radius:100px;
+    transition:border-color .15s, background .15s;
+  }
+  .shot-badge:hover{border-color:#2FE398; background:rgba(8,8,13,.92);}
+  .shot-badge .d{width:6px; height:6px; border-radius:50%; background:#2FE398; box-shadow:0 0 6px #2FE398;}
+
+  /* ---------------- SECTION HEADS ---------------- */
+  .section{padding:88px 0;}
+  .section-head{max-width:640px; margin-bottom:48px;}
+  .section-head h2{font-size:clamp(28px,3.8vw,40px); letter-spacing:-.01em; margin-top:12px;}
+  .section-head p{color:var(--slate); font-size:16px; margin-top:12px;}
+  .section-alt{background:var(--bg-2);}
+
+  /* ---------------- SKILLS ---------------- */
+  .skills-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .skill-card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;}
+  .skill-card .cat{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); margin-bottom:14px; display:block;}
+  .pill-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .pill{font-size:13px; font-weight:500; padding:7px 13px; border-radius:100px; background:var(--blue-soft); color:#9FB6FF; border:1px solid rgba(77,124,255,.25);}
+  .skill-card:nth-child(3n+2) .pill{background:var(--pink-soft); color:#FFA7CE; border-color:rgba(255,79,163,.25);}
+  .skill-card:nth-child(3n) .pill{background:#1C2E28; color:#7CE0B8; border-color:rgba(47,227,152,.25);}
+
+  /* ---------------- EXPERIENCE ---------------- */
+  .timeline{position:relative; padding-left:32px;}
+  .timeline::before{content:''; position:absolute; left:6px; top:6px; bottom:6px; width:1.5px; background:var(--line);}
+  .t-item{position:relative; padding-bottom:40px;}
+  .t-item:last-child{padding-bottom:0;}
+  .t-dot{position:absolute; left:-32px; top:4px; width:13px; height:13px; border-radius:50%; background:var(--bg); border:2.5px solid var(--blue);}
+  .t-item.current .t-dot{background:var(--grad); border-color:transparent;}
+  .t-date{font-family:var(--mono); font-size:12px; color:var(--slate); margin-bottom:6px;}
+  .t-role{font-size:19px; font-weight:700; font-family:var(--display);}
+  .t-org{font-size:14.5px; color:var(--ink-soft); margin:2px 0 12px;}
+  .t-bullets{margin:0; padding-left:18px; color:var(--ink-soft); font-size:14.5px; line-height:1.7;}
+  .t-bullets li{margin-bottom:4px;}
+  .t-tags{display:flex; gap:7px; flex-wrap:wrap; margin-top:14px;}
+  .tag-sm{font-family:var(--mono); font-size:11px; color:var(--slate); background:var(--card); border:1px solid var(--line); padding:4px 9px; border-radius:6px;}
+
+  /* ---------------- PROJECTS ---------------- */
+  .proj-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+  .proj-card{
+    background:var(--card); border:1px solid var(--line); border-radius:18px;
+    padding:26px; display:flex; flex-direction:column;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .proj-card:hover{transform:translateY(-3px); box-shadow:0 20px 40px rgba(0,0,0,.35); border-color:#33334D;}
+  .proj-card.featured{grid-column:span 2;}
+  .proj-icon{
+    width:44px; height:44px; border-radius:12px; margin-bottom:16px;
+    display:flex; align-items:center; justify-content:center; font-size:19px;
+    background:var(--grad); color:#fff;
+  }
+  .proj-top{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:10px;}
+  .proj-title{font-family:var(--display); font-weight:700; font-size:20px;}
+  .proj-badge{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.06em;
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--bg); border:1px solid rgba(47,227,152,.35); color:#2FE398; padding:5px 10px; border-radius:100px; white-space:nowrap;
+  }
+  .proj-badge .d{width:6px; height:6px; border-radius:50%; background:#2FE398;}
+  .proj-desc{color:var(--ink-soft); font-size:14.5px; line-height:1.65; margin-bottom:16px; flex-grow:1;}
+  .proj-tags{display:flex; gap:7px; flex-wrap:wrap; margin-bottom:18px;}
+  .proj-link{font-size:13.5px; font-weight:600; display:inline-flex; align-items:center; gap:6px; color:var(--blue); border-bottom:1.5px solid var(--blue); width:fit-content; padding-bottom:1px;}
+  .proj-link:hover{color:var(--pink); border-color:var(--pink);}
+  .proj-note{
+    margin-top:28px; padding:16px 20px; border:1px dashed var(--line); border-radius:14px;
+    font-size:13px; color:var(--slate); display:flex; align-items:center; gap:10px;
+  }
+
+  /* ---------------- EDUCATION / CERTS ---------------- */
+  .two-col-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .edu-card, .cert-card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:24px;}
+  .edu-card .deg{font-family:var(--display); font-weight:700; font-size:18px;}
+  .edu-card .inst{font-size:14px; color:var(--ink-soft); margin:6px 0 10px;}
+  .edu-card .meta{font-family:var(--mono); font-size:12px; color:var(--slate);}
+  .cert-row{display:flex; align-items:flex-start; gap:14px;}
+  .cert-icon{width:38px; height:38px; border-radius:10px; background:var(--grad); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#fff; font-weight:700;}
+  .cert-name{font-weight:700; font-size:14.5px;}
+  .cert-meta{font-size:13px; color:var(--slate); margin-top:3px;}
+
+  /* ---------------- CONTACT ---------------- */
+  .contact{position:relative; border-radius:28px; margin:0 28px; padding:2px; background:var(--grad); overflow:hidden;}
+  .contact-inner-bg{background:var(--bg); border-radius:26px; padding:70px 48px; position:relative; overflow:hidden;}
+  .contact-inner-bg::before{content:''; position:absolute; right:-140px; top:-140px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(255,79,163,.28), transparent 70%);}
+  .contact-inner-bg::after{content:''; position:absolute; left:-140px; bottom:-140px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(77,124,255,.28), transparent 70%);}
+  .contact-inner{position:relative; max-width:640px;}
+  .contact h2{font-size:clamp(28px,3.8vw,42px); margin:14px 0 16px;}
+  .contact p{color:var(--ink-soft); font-size:16px; margin-bottom:32px; max-width:480px;}
+  .contact-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px;}
+  .contact-meta{display:flex; gap:28px; flex-wrap:wrap; font-size:14px; color:var(--slate);}
+  .contact-meta a{color:var(--ink); border-bottom:1px solid var(--line);}
+  .contact-meta a:hover{border-color:var(--pink); color:var(--pink);}
+
+  footer{padding:36px 28px 40px; text-align:center; font-size:13px; color:var(--slate);}
+
+  /* ---------------- FLOATING DUMMY CHATBOT WIDGET ---------------- */
+  .fab{
+    position:fixed; right:22px; bottom:22px; z-index:80;
+    width:60px; height:60px; border-radius:50%;
+    background:var(--grad); border:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 30px rgba(255,79,163,.4);
+    font-size:24px;
+    transition:transform .2s ease;
+  }
+  .fab:hover{transform:scale(1.06);}
+  .fab .fab-dot{position:absolute; top:2px; right:2px; width:13px; height:13px; border-radius:50%; background:#2FE398; border:2px solid var(--bg);}
+  .fab.hide{display:none;}
+
+  .widget{
+    position:fixed; right:22px; bottom:22px; z-index:81;
+    width:min(360px, calc(100vw - 32px)); height:min(520px, calc(100vh - 100px));
+    background:var(--card); border:1px solid var(--line); border-radius:20px;
+    display:flex; flex-direction:column; overflow:hidden;
+    box-shadow:0 30px 80px rgba(0,0,0,.6);
+    transform:translateY(16px) scale(.97); opacity:0; pointer-events:none;
+    transition:transform .22s ease, opacity .22s ease;
+  }
+  .widget.open{transform:translateY(0) scale(1); opacity:1; pointer-events:auto;}
+  .widget-head{display:flex; align-items:center; gap:10px; padding:14px 16px; border-bottom:1px solid var(--line); background:var(--card-2);}
+  .widget-head .avatar{width:34px; height:34px; border-radius:10px; background:var(--grad); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0;}
+  .widget-head .ti{flex-grow:1; min-width:0;}
+  .widget-head .name{font-size:13.5px; font-weight:600;}
+  .widget-head .status{font-size:10.5px; color:#2FE398; font-family:var(--mono); display:flex; align-items:center; gap:5px;}
+  .widget-head .status::before{content:''; width:6px; height:6px; border-radius:50%; background:#2FE398;}
+  .widget-close{background:none; border:none; color:var(--slate); font-size:18px; cursor:pointer; padding:4px 6px; line-height:1;}
+  .widget-close:hover{color:var(--ink);}
+  .widget-pills{display:flex; gap:6px; padding:10px 14px; overflow-x:auto; border-bottom:1px solid var(--line); flex-shrink:0;}
+  .widget-pills::-webkit-scrollbar{display:none;}
+  .wpill{
+    font-family:var(--mono); font-size:11px; white-space:nowrap; flex-shrink:0;
+    background:var(--bg); border:1px solid var(--line); color:var(--ink-soft);
+    padding:6px 12px; border-radius:100px; cursor:pointer; transition:border-color .15s,color .15s;
+  }
+  .wpill:hover{border-color:var(--blue); color:var(--ink);}
+  .widget-body{flex-grow:1; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:12px;}
+  .wbubble{max-width:86%; padding:10px 14px; border-radius:14px; font-size:13px; line-height:1.55;}
+  .wbubble.bot{align-self:flex-start; background:var(--card-2); border:1px solid var(--line); color:var(--ink-soft); border-bottom-left-radius:4px;}
+  .wbubble.user{align-self:flex-end; background:var(--blue); color:#fff; border-bottom-right-radius:4px;}
+  .wbubble a{color:#9FC1FF; text-decoration:underline;}
+  .wbubble.bot ul{margin:6px 0 0; padding-left:16px;}
+  .wtyping{align-self:flex-start; display:flex; gap:4px; padding:10px 14px; background:var(--card-2); border:1px solid var(--line); border-radius:14px; border-bottom-left-radius:4px;}
+  .wtyping span{width:5px; height:5px; border-radius:50%; background:var(--slate); animation:blink 1.3s infinite;}
+  .wtyping span:nth-child(2){animation-delay:.2s;} .wtyping span:nth-child(3){animation-delay:.4s;}
+  .widget-note{font-size:10px; color:var(--slate); text-align:center; padding:6px 14px 0;}
+  .widget-foot{display:flex; gap:8px; padding:12px 14px; border-top:1px solid var(--line); background:var(--card-2); flex-shrink:0;}
+  .widget-foot input{
+    flex-grow:1; background:var(--bg); border:1px solid var(--line); border-radius:100px;
+    padding:10px 16px; font-size:13px; color:var(--ink); font-family:var(--body);
+  }
+  .widget-foot input::placeholder{color:var(--slate);}
+  .widget-foot input:focus{outline:none; border-color:var(--blue);}
+  .widget-foot button{width:36px; height:36px; border-radius:50%; background:var(--grad); border:none; color:#fff; font-size:15px; flex-shrink:0; cursor:pointer;}
+
+  @media (max-width:480px){
+    .widget{right:16px; bottom:16px; width:calc(100vw - 32px); height:min(70vh, 560px);}
+    .fab{right:18px; bottom:18px;}
+  }
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:none;}
+
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr;}
+    .skills-grid{grid-template-columns:1fr 1fr;}
+    .proj-grid{grid-template-columns:1fr;}
+    .proj-card.featured{grid-column:span 1;}
+    .two-col-grid{grid-template-columns:1fr;}
+    .navlinks{
+      position:fixed; inset:68px 0 auto 0; background:var(--bg); flex-direction:column;
+      align-items:flex-start; padding:20px 28px 26px; gap:18px; border-bottom:1px solid var(--line);
+      transform:translateY(-130%); transition:transform .25s ease; z-index:40;
+    }
+    .navlinks.open{transform:translateY(0);}
+    .navtoggle{display:block;}
+    .navlinks .btn{margin-top:6px;}
+    .contact{margin:0 14px;}
+    .contact-inner-bg{padding:48px 26px;}
+  }
+  @media (max-width:560px){
+    .skills-grid{grid-template-columns:1fr;}
+    .wrap{padding:0 18px;}
+    .hero{padding:40px 0 40px;}
+    .section{padding:60px 0;}
+    .bubble{max-width:92%;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .live-dot::after{animation:none;}
+    .typing span{animation:none;}
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="brand"><span class="brand-dot"></span>Diksha<span style="opacity:.4">.dev</span></a>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">Résumé ↓</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>AI/ML · BACKEND · RETRIEVAL SYSTEMS</span>
+        <h1>Diksha <span class="grad-text">Phartyal</span></h1>
+        <div class="live-badge"><span class="live-dot"></span>LIVE — RAG chatbot serving 300+ students, 4 languages</div>
+        <p class="lede">MCA graduate who builds retrieval-augmented systems and backend APIs that ship — not just notebooks. I turn language, data, and vectors into products people actually use.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download Résumé</a>
+          <a href="mailto:phartyaldiksha05@gmail.com" class="btn btn-ghost">Email Me</a>
+        </div>
+        <div class="stat-chips">
+          <div class="chip"><div class="n">300+</div><div class="l">Students served</div></div>
+          <div class="chip"><div class="n">4</div><div class="l">Languages</div></div>
+          <div class="chip"><div class="n">100+</div><div class="l">Pages indexed</div></div>
+          <div class="chip"><div class="n">~40%</div><div class="l">Retrieval gain</div></div>
+        </div>
+      </div>
+
+      <!-- Signature visual: a real screenshot of the live chatbot, not a mockup -->
+      <div class="hero-visual">
+        <div class="glow blue"></div>
+        <div class="glow pink"></div>
+        <div class="chat-shot">
+          <img src="assets/chatbot-live-preview.png" alt="Screenshot of Diksha's live multilingual RAG chatbot answering student questions on the GBPIET website">
+          <a href="https://gbpiet.ac.in" target="_blank" rel="noopener" class="shot-badge"><span class="d"></span>LIVE on gbpiet.ac.in →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span>Stack</span>
+        <h2>Technologies I build with</h2>
+        <p>From vector search to production deployment — the tools behind the chatbot and the projects below.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <span class="cat">Programming</span>
+          <div class="pill-row"><span class="pill">Python</span><span class="pill">SQL</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <span class="cat">AI &amp; LLMs</span>
+          <div class="pill-row"><span class="pill">LangChain</span><span class="pill">RAG</span><span class="pill">Prompt Engineering</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <span class="cat">Vector Databases</span>
+          <div class="pill-row"><span class="pill">FAISS</span><span class="pill">Qdrant</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <span class="cat">Backend &amp; APIs</span>
+          <div class="pill-row"><span class="pill">FastAPI</span><span class="pill">Flask</span><span class="pill">REST APIs</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <span class="cat">Databases</span>
+          <div class="pill-row"><span class="pill">PostgreSQL (Neon)</span><span class="pill">MongoDB</span><span class="pill">MySQL</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <span class="cat">Tools &amp; Deployment</span>
+          <div class="pill-row"><span class="pill">Git</span><span class="pill">Docker</span><span class="pill">Vercel</span><span class="pill">HuggingFace Spaces</span><span class="pill">React.js</span><span class="pill">Power BI</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-alt" id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span>Track record</span>
+        <h2>Where I've worked</h2>
+        <p>Three internships, three different sides of the stack — AI, strategy, and backend.</p>
+      </div>
+      <div class="timeline">
+        <div class="t-item current reveal">
+          <div class="t-dot"></div>
+          <div class="t-date">MAY – JUN 2026 · REMOTE</div>
+          <div class="t-role">Emerging Technologies Intern</div>
+          <div class="t-org">Edunet Foundation (AICTE &amp; IBM SkillsBuild)</div>
+          <ul class="t-bullets">
+            <li>Completed a 4-week intensive program covering AI, Cyber Security, Quantum Computing, and IBM Cloud technologies.</li>
+            <li>Built an AI and Cloud Computing project applying industry-standard tools and workflows introduced through IBM SkillsBuild.</li>
+          </ul>
+          <div class="t-tags"><span class="tag-sm">AI</span><span class="tag-sm">IBM Cloud</span><span class="tag-sm">Cyber Security</span></div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-date">JAN – MAY 2026 · REMOTE</div>
+          <div class="t-role">Strategy, Consulting &amp; Research Intern — Team Lead</div>
+          <div class="t-org">UptoSkills</div>
+          <ul class="t-bullets">
+            <li>Led a 4-member team to deliver 3+ consulting and market analysis reports on schedule across 5+ industry sectors.</li>
+            <li>Standardized documentation templates across the team, reducing revision cycles and improving turnaround time.</li>
+          </ul>
+          <div class="t-tags"><span class="tag-sm">Leadership</span><span class="tag-sm">Market Research</span><span class="tag-sm">Documentation</span></div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-date">JUN – JUL 2025 · REMOTE</div>
+          <div class="t-role">Backend Development Intern</div>
+          <div class="t-org">Prodesk IT &amp; Engineering Services</div>
+          <ul class="t-bullets">
+            <li>Built and tested 5+ REST API endpoints in Python with request validation, structured routing, and modular data processing.</li>
+            <li>Received a Certificate of Appreciation for consistent code quality and on-time delivery.</li>
+          </ul>
+          <div class="t-tags"><span class="tag-sm">Python</span><span class="tag-sm">REST APIs</span><span class="tag-sm">Flask</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span>Selected work</span>
+        <h2>Projects</h2>
+        <p>One production system, and a handful of data/ML builds from my GitHub.</p>
+      </div>
+      <div class="proj-grid">
+
+        <div class="proj-card featured reveal">
+          <div class="proj-top">
+            <div>
+              <div class="proj-icon">💬</div>
+              <div class="proj-title">Multilingual AI Chatbot for GBPIET</div>
+            </div>
+            <span class="proj-badge"><span class="d"></span>LIVE</span>
+          </div>
+          <p class="proj-desc">A full-stack Retrieval-Augmented Generation (RAG) chatbot deployed on the official GBPIET website — serving 300+ students across 4 languages. Qdrant's hybrid dense+sparse vector search over 100+ institute pages lifted retrieval accuracy by roughly 40%. Backend on HuggingFace Spaces, frontend on Vercel, database on Neon (PostgreSQL), wired end-to-end with CI/CD.</p>
+          <div class="proj-tags">
+            <span class="tag-sm">FastAPI</span><span class="tag-sm">LangChain</span><span class="tag-sm">Qdrant</span><span class="tag-sm">Groq API</span><span class="tag-sm">React.js</span><span class="tag-sm">PostgreSQL</span>
+          </div>
+          <a href="https://github.com/phartyaldiksha05-ux/Multilingual-college-chatbot" class="proj-link" target="_blank" rel="noopener">View source on GitHub →</a>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-icon">📈</div>
+          <div class="proj-title">Car Price Prediction</div>
+          <p class="proj-desc">An end-to-end ML regression pipeline predicting used-car prices from brand, year, mileage, and fuel type — covering data cleaning, feature engineering, training, and evaluation.</p>
+          <div class="proj-tags"><span class="tag-sm">Python</span><span class="tag-sm">Scikit-learn</span><span class="tag-sm">Pandas</span></div>
+          <a href="https://github.com/phartyaldiksha05-ux/-Car-Price-Prediction-Project" class="proj-link" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-icon">📊</div>
+          <div class="proj-title">Customer Churn Analysis Dashboard</div>
+          <p class="proj-desc">An interactive Power BI dashboard with dynamic risk indicators and conditional formatting, surfacing executive-level insights to help spot at-risk customer segments at a glance.</p>
+          <div class="proj-tags"><span class="tag-sm">Power BI</span><span class="tag-sm">DAX</span><span class="tag-sm">Data Viz</span></div>
+          <a href="https://github.com/phartyaldiksha05-ux/-Customer-Churn-Analysis-Dashboard-Power-BI-" class="proj-link" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-icon">💹</div>
+          <div class="proj-title">Business Sales Performance Analytics</div>
+          <p class="proj-desc">An end-to-end sales analytics project analyzing performance, profitability, and growth trends using Python and data visualization techniques.</p>
+          <div class="proj-tags"><span class="tag-sm">Python</span><span class="tag-sm">Pandas</span><span class="tag-sm">Visualization</span></div>
+          <a href="https://github.com/phartyaldiksha05-ux/Business-Sales-Performance-Analytics" class="proj-link" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-icon">📉</div>
+          <div class="proj-title">Unemployment Analysis</div>
+          <p class="proj-desc">A statistical data-analysis project exploring unemployment trends through visualization, uncovering meaningful regional and temporal insights.</p>
+          <div class="proj-tags"><span class="tag-sm">Python</span><span class="tag-sm">Statistics</span><span class="tag-sm">Data Viz</span></div>
+          <a href="https://github.com/phartyaldiksha05-ux/UnemploymentAnalysis" class="proj-link" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+
+      </div>
+      <div class="proj-note reveal">🖼️ Have real dashboard screenshots (Power BI / Jupyter charts) for any of these? Send them over and I'll drop them straight into these cards.</div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTS -->
+  <section class="section section-alt" id="education">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span>Background</span>
+        <h2>Education &amp; certifications</h2>
+      </div>
+      <div class="two-col-grid" style="margin-bottom:20px;">
+        <div class="edu-card reveal">
+          <div class="deg">Master of Computer Applications (MCA)</div>
+          <div class="inst">G.B. Pant Institute of Engineering &amp; Technology, Pauri, Uttarakhand</div>
+          <div class="meta">CGPA 8.28 · 2024–2026</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="deg">Bachelor of Science (BSc)</div>
+          <div class="inst">Kumaun University, Nainital</div>
+          <div class="meta">CGPA 6.07 · 2021–2024</div>
+        </div>
+      </div>
+      <div class="two-col-grid">
+        <div class="cert-card reveal">
+          <div class="cert-row">
+            <div class="cert-icon">✓</div>
+            <div>
+              <div class="cert-name">Certificate of Appreciation</div>
+              <div class="cert-meta">Prodesk IT &amp; Engineering Services · July 2025</div>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-row">
+            <div class="cert-icon">✓</div>
+            <div>
+              <div class="cert-name">Internship Certificate</div>
+              <div class="cert-meta">UptoSkills · May 2026 · ID US-INT-2026-X3CR78N</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="contact reveal">
+      <div class="contact-inner-bg">
+        <div class="contact-inner">
+          <span class="eyebrow"><span class="dot"></span>Get in touch</span>
+          <h2>Let's build something worth deploying.</h2>
+          <p>Open to entry-level roles and internships in AI/ML, backend development, and data science. I reply fast — email is best.</p>
+          <div class="contact-ctas">
+            <a href="mailto:phartyaldiksha05@gmail.com" class="btn btn-primary">Email Me</a>
+            <a href="resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download Résumé</a>
+          </div>
+          <div class="contact-meta">
+            <span>📍 Ramnagar, Uttarakhand</span>
+            <a href="tel:+919568646077">+91 95686 46077</a>
+            <a href="https://www.linkedin.com/in/diksha-phartyal-818357354/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/phartyaldiksha05-ux" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>© 2026 Diksha Phartyal · Built with care</footer>
+
+<!-- FLOATING DUMMY CHATBOT WIDGET -->
+<button class="fab" id="fabOpen" aria-label="Open chat assistant">
+  💬<span class="fab-dot"></span>
+</button>
+
+<div class="widget" id="widget" role="dialog" aria-label="Portfolio assistant chat">
+  <div class="widget-head">
+    <div class="avatar">🙏</div>
+    <div class="ti">
+      <div class="name">Ask about Diksha</div>
+      <div class="status">Demo bot · Online</div>
+    </div>
+    <button class="widget-close" id="widgetClose" aria-label="Close chat">✕</button>
+  </div>
+  <div class="widget-pills" id="widgetPills">
+    <span class="wpill" data-q="skills">Skills</span>
+    <span class="wpill" data-q="projects">Projects</span>
+    <span class="wpill" data-q="experience">Experience</span>
+    <span class="wpill" data-q="resume">Resume</span>
+    <span class="wpill" data-q="contact">Contact</span>
+  </div>
+  <div class="widget-body" id="widgetBody">
+    <div class="wbubble bot">Hi! I'm a small demo bot Diksha built for this portfolio 👋<br><br>Ask me about her <b>skills</b>, <b>projects</b>, <b>experience</b>, or how to get in <b>touch</b> — or tap a chip above.</div>
+  </div>
+  <div class="widget-note">⚠️ Simple keyword-matched demo — not the real RAG chatbot. That one's live at gbpiet.ac.in.</div>
+  <div class="widget-foot">
+    <input type="text" id="widgetInput" placeholder="Ask something…" autocomplete="off">
+    <button id="widgetSend" aria-label="Send">↑</button>
+  </div>
+</div>
+
+<script>
+  // Mobile nav toggle
+  const navtoggle = document.getElementById('navtoggle');
+  const navlinks = document.getElementById('navlinks');
+  navtoggle.addEventListener('click', () => {
+    const open = navlinks.classList.toggle('open');
+    navtoggle.setAttribute('aria-expanded', open);
+  });
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navlinks.classList.remove('open');
+    navtoggle.setAttribute('aria-expanded', false);
+  }));
+
+  // Scroll reveal (with a safety net so content never gets stuck invisible)
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in'));
+    }, 1800);
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  // ---------------- Dummy chatbot widget ----------------
+  (function () {
+    const fab = document.getElementById('fabOpen');
+    const widget = document.getElementById('widget');
+    const closeBtn = document.getElementById('widgetClose');
+    const body = document.getElementById('widgetBody');
+    const input = document.getElementById('widgetInput');
+    const sendBtn = document.getElementById('widgetSend');
+    const pills = document.getElementById('widgetPills');
+
+    function openWidget() {
+      widget.classList.add('open');
+      fab.classList.add('hide');
+      input.focus();
+    }
+    function closeWidget() {
+      widget.classList.remove('open');
+      fab.classList.remove('hide');
+    }
+    fab.addEventListener('click', openWidget);
+    closeBtn.addEventListener('click', closeWidget);
+
+    const RESPONSES = [
+      { keys: ['skill', 'stack', 'tech', 'know', 'language'],
+        html: "Diksha works across:<ul><li><b>AI/LLMs</b> — LangChain, RAG, Prompt Engineering</li><li><b>Vector DBs</b> — FAISS, Qdrant</li><li><b>Backend</b> — FastAPI, Flask, REST APIs</li><li><b>Databases</b> — PostgreSQL, MongoDB, MySQL</li><li><b>Tools</b> — Docker, Git, Vercel, HuggingFace Spaces, Power BI</li></ul>See the full breakdown in the <a href=\"#skills\">Skills</a> section." },
+      { keys: ['project', 'chatbot', 'churn', 'car price', 'github', 'build', 'built', 'work on'],
+        html: "Her flagship build is a <b>live multilingual RAG chatbot</b> for GBPIET — serving 300+ students in 4 languages. She's also shipped a Car Price Prediction model, a Power BI Customer Churn dashboard, and a couple of data-analytics projects. Check the <a href=\"#projects\">Projects</a> section — every card links to the GitHub repo." },
+      { keys: ['experience', 'internship', 'job', 'work history', 'company'],
+        html: "Three internships: <b>Emerging Technologies Intern</b> (Edunet/IBM SkillsBuild), <b>Strategy &amp; Research Intern — Team Lead</b> (UptoSkills), and <b>Backend Development Intern</b> (Prodesk). Details in the <a href=\"#experience\">Experience</a> timeline." },
+      { keys: ['resume', 'cv', 'download'],
+        html: "Here you go → <a href=\"resume.pdf\" target=\"_blank\" rel=\"noopener\">Download Diksha's résumé (PDF)</a>." },
+      { keys: ['contact', 'email', 'hire', 'reach', 'phone', 'connect', 'linkedin'],
+        html: "Best way is email: <a href=\"mailto:phartyaldiksha05@gmail.com\">phartyaldiksha05@gmail.com</a>. She's also on <a href=\"https://www.linkedin.com/in/diksha-phartyal-818357354/\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> and <a href=\"https://github.com/phartyaldiksha05-ux\" target=\"_blank\" rel=\"noopener\">GitHub</a>. Based in Ramnagar, Uttarakhand." },
+      { keys: ['education', 'degree', 'college', 'mca', 'cgpa', 'study'],
+        html: "MCA from G.B. Pant Institute of Engineering &amp; Technology (CGPA 8.28, 2024–2026), BSc from Kumaun University (CGPA 6.07). See <a href=\"#education\">Education</a>." },
+      { keys: ['hello', 'hi', 'hey', 'namaste'],
+        html: "Hey there! 👋 Ask me about Diksha's skills, projects, experience, or how to reach her." },
+      { keys: ['live', 'gbpiet', 'real chatbot', 'actual'],
+        html: "The real one is a full RAG system with vector search over 100+ pages — this widget is just a light keyword-matched demo of the same idea, built for the portfolio. You can see the real thing at gbpiet.ac.in." },
+    ];
+    const FALLBACK = "I'm just a simple demo bot (unlike Diksha's real RAG chatbot!). Try asking about her <b>skills</b>, <b>projects</b>, <b>experience</b>, or <b>contact</b> — or email her directly.";
+
+    function matchResponse(text) {
+      const t = text.toLowerCase();
+      for (const r of RESPONSES) {
+        if (r.keys.some(k => t.includes(k))) return r.html;
+      }
+      return FALLBACK;
+    }
+
+    function scrollToBottom() { body.scrollTop = body.scrollHeight; }
+
+    function addBubble(html, cls) {
+      const div = document.createElement('div');
+      div.className = 'wbubble ' + cls;
+      div.innerHTML = html;
+      body.appendChild(div);
+      scrollToBottom();
+    }
+
+    function respond(text) {
+      addBubble(text.replace(/</g, '&lt;'), 'user');
+      const typing = document.createElement('div');
+      typing.className = 'wtyping';
+      typing.innerHTML = '<span></span><span></span><span></span>';
+      body.appendChild(typing);
+      scrollToBottom();
+      setTimeout(() => {
+        typing.remove();
+        addBubble(matchResponse(text), 'bot');
+      }, 550 + Math.random() * 350);
+    }
+
+    sendBtn.addEventListener('click', () => {
+      const v = input.value.trim();
+      if (!v) return;
+      respond(v);
+      input.value = '';
+    });
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') sendBtn.click();
+    });
+    pills.addEventListener('click', (e) => {
+      const p = e.target.closest('.wpill');
+      if (!p) return;
+      respond(p.textContent);
+    });
+  })();
+</script>
+
+</body>
+</html>
