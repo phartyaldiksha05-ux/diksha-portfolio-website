@@ -13,7 +13,7 @@
 <meta property="og:image" content="assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://your-deployed-link-here.vercel.app">
+<meta property="og:url" content="https://diksha-portfolio-website-omega.vercel.app">
 
 <!-- Twitter/X card (harmless to include, some tools use it as fallback) -->
 <meta name="twitter:card" content="summary_large_image">
@@ -216,6 +216,9 @@
 
   /* ---------------- EDUCATION / CERTS ---------------- */
   .two-col-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .certs-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:20px;}
+  .cert-link{display:inline-block; margin-top:10px; font-size:12.5px; font-weight:600; color:var(--blue); border-bottom:1.5px solid var(--blue); width:fit-content; padding-bottom:1px;}
+  .cert-link:hover{color:var(--pink); border-color:var(--pink);}
   .edu-card, .cert-card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:24px;}
   .edu-card .deg{font-family:var(--display); font-weight:700; font-size:18px;}
   .edu-card .inst{font-size:14px; color:var(--ink-soft); margin:6px 0 10px;}
@@ -499,7 +502,10 @@
           <div class="proj-tags">
             <span class="tag-sm">FastAPI</span><span class="tag-sm">LangChain</span><span class="tag-sm">Qdrant</span><span class="tag-sm">Groq API</span><span class="tag-sm">React.js</span><span class="tag-sm">PostgreSQL</span>
           </div>
-          <a href="https://github.com/phartyaldiksha05-ux/Multilingual-college-chatbot" class="proj-link" target="_blank" rel="noopener">View source on GitHub →</a>
+          <div style="display:flex; gap:18px; flex-wrap:wrap;">
+            <a href="https://gbpiet.ac.in" class="proj-link" target="_blank" rel="noopener">Live Site →</a>
+            <a href="https://github.com/phartyaldiksha05-ux/Multilingual-college-chatbot" class="proj-link" target="_blank" rel="noopener">View source on GitHub →</a>
+          </div>
         </div>
 
         <div class="proj-card reveal">
@@ -558,13 +564,14 @@
           <div class="meta">CGPA 6.07 · 2021–2024</div>
         </div>
       </div>
-      <div class="two-col-grid">
+      <div class="certs-grid">
         <div class="cert-card reveal">
           <div class="cert-row">
             <div class="cert-icon">✓</div>
             <div>
-              <div class="cert-name">Certificate of Appreciation</div>
-              <div class="cert-meta">Prodesk IT &amp; Engineering Services · July 2025</div>
+              <div class="cert-name">Certificate of Appreciation — AI Chatbot Development</div>
+              <div class="cert-meta">GBPIET, Dept. of CSA · May 2026</div>
+              <a href="assets/certificates/gbpiet-chatbot-appreciation.png" class="cert-link" target="_blank" rel="noopener">View certificate →</a>
             </div>
           </div>
         </div>
@@ -572,8 +579,49 @@
           <div class="cert-row">
             <div class="cert-icon">✓</div>
             <div>
-              <div class="cert-name">Internship Certificate</div>
+              <div class="cert-name">Certificate of Completion — Emerging Technologies</div>
+              <div class="cert-meta">Edunet Foundation (AICTE &amp; IBM SkillsBuild) · Jun 2026</div>
+              <a href="assets/certificates/edunet-emerging-tech.png" class="cert-link" target="_blank" rel="noopener">View certificate →</a>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-row">
+            <div class="cert-icon">✓</div>
+            <div>
+              <div class="cert-name">Internship Completion — Team Lead</div>
               <div class="cert-meta">UptoSkills · May 2026 · ID US-INT-2026-X3CR78N</div>
+              <a href="assets/certificates/uptoskills-internship.png" class="cert-link" target="_blank" rel="noopener">View certificate →</a>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-row">
+            <div class="cert-icon">✓</div>
+            <div>
+              <div class="cert-name">Certificate of Appreciation — Backend Development</div>
+              <div class="cert-meta">Prodesk IT &amp; Engineering Services · July 2025</div>
+              <a href="assets/certificates/prodesk-backend-internship.png" class="cert-link" target="_blank" rel="noopener">View certificate →</a>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-row">
+            <div class="cert-icon">✓</div>
+            <div>
+              <div class="cert-name">Certificate of Participation — ViCoDathon 2026 (AB Talks)</div>
+              <div class="cert-meta">India's AI Vibe Coding Hackathon · Aug 2026</div>
+              <a href="assets/certificates/ab-talks-vicodathon.png" class="cert-link" target="_blank" rel="noopener">View certificate →</a>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-row">
+            <div class="cert-icon">✓</div>
+            <div>
+              <div class="cert-name">Course Completion — Introduction to Artificial Intelligence</div>
+              <div class="cert-meta">Infosys Springboard · Jun 2025</div>
+              <a href="assets/certificates/infosys-ai-course.png" class="cert-link" target="_blank" rel="noopener">View certificate →</a>
             </div>
           </div>
         </div>
