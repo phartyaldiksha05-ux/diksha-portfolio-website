@@ -442,7 +442,7 @@
   .more-toggle:hover{border-color:var(--blue);}
   .more-proj-grid{margin-top:18px;}
   .proj-shot{position:relative; aspect-ratio:16/9; border-radius:12px; overflow:hidden; border:1px dashed var(--line); background:var(--blue-soft); margin:0 0 14px;}
-  .proj-shot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;}
+  .proj-shot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top center; z-index:1;}
   .proj-shot::after{content:'Screenshot coming soon'; position:absolute; inset:0; display:grid; place-items:center; font-family:var(--mono); font-size:12px; color:var(--slate); z-index:0;}
   .arch{display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:14px 0 6px;}
   .arch-step{font-family:var(--mono); font-size:11.5px; padding:6px 10px; border-radius:8px; border:1px solid var(--line); background:var(--bg-2); color:var(--ink-soft);}
@@ -659,7 +659,7 @@
             </div>
             <span class="proj-badge"><span class="d"></span>LIVE</span>
           </div>
-          <div class="proj-shot"><img src="assets/projects/gbpiet-chatbot.png" alt="Screenshot of the GBPIET multilingual RAG chatbot answering a student question" width="1200" height="675" loading="lazy" onerror="this.parentNode.classList.add('is-missing'); this.remove();"></div>
+          <div class="proj-shot"><img src="assets/projects/gbpiet-chatbot.png" alt="Screenshot of the GBPIET multilingual RAG chatbot answering a student question" width="1359" height="678" loading="lazy" onerror="this.parentNode.classList.add('is-missing'); this.remove();"></div>
           <p class="proj-desc">A full-stack Retrieval-Augmented Generation (RAG) chatbot deployed on the official GBPIET website — serving 300+ students across 4 languages. Qdrant's hybrid dense+sparse vector search over 100+ institute pages lifted retrieval accuracy by roughly 40%. Backend on HuggingFace Spaces, frontend on Vercel, database on Neon (PostgreSQL), wired end-to-end with CI/CD.</p>
           <p class="metric-note">[HOW MEASURED: e.g. unique users since launch] · [HOW MEASURED: e.g. recall@5 on a 50-question test set, hybrid vs dense-only]</p>
           <div class="arch" role="img" aria-label="Pipeline: user query, language detection, hybrid search with Qdrant dense and sparse vectors, LLM via Groq, answer">
@@ -681,7 +681,7 @@
 
         <div class="proj-card reveal">
           <div class="proj-top"><div><div class="proj-icon">🧑‍💼</div><div class="proj-title">Meetwise AI: HR Interview Assistant</div></div><span class="proj-badge"><span class="d"></span>LIVE</span></div>
-          <div class="proj-shot"><img src="assets/projects/meetwise.png" alt="Screenshot of the Meetwise AI HR interview assistant dashboard" width="1200" height="675" loading="lazy" onerror="this.parentNode.classList.add('is-missing'); this.remove();"></div>
+          <div class="proj-shot"><img src="assets/projects/meetwise.png" alt="Screenshot of the Meetwise AI HR interview assistant dashboard" width="1332" height="620" loading="lazy" onerror="this.parentNode.classList.add('is-missing'); this.remove();"></div>
           <p class="proj-desc">A hiring workspace that reads PDF resumes, writes candidate briefings and interview questions with an LLM, schedules interviews with reminders, and summarizes HR feedback after each round.</p>
           <div class="proj-tags"><span class="tag-sm">React</span><span class="tag-sm">FastAPI</span><span class="tag-sm">PostgreSQL</span><span class="tag-sm">Docker</span></div>
           <div style="display:flex; gap:18px; flex-wrap:wrap;">
@@ -692,7 +692,7 @@
 
         <div class="proj-card reveal">
           <div class="proj-top"><div><div class="proj-icon">🎙️</div><div class="proj-title">AI Interview Agent</div></div><span class="proj-badge"><span class="d"></span>LIVE</span></div>
-          <div class="proj-shot"><img src="assets/projects/ai-interview-agent.png" alt="Screenshot of the AI Interview Agent mock-interview screen" width="1200" height="675" loading="lazy" onerror="this.parentNode.classList.add('is-missing'); this.remove();"></div>
+          <div class="proj-shot"><img src="assets/projects/ai-interview-agent.png" alt="Screenshot of the AI Interview Agent mock-interview screen" width="1070" height="529" loading="lazy" onerror="this.parentNode.classList.add('is-missing'); this.remove();"></div>
           <p class="proj-desc">Built for ViCoDathon 2026 by AB Talks. An adaptive, voice-enabled technical interview that asks questions based on what a candidate built, skipped, and struggled with during their cohort.</p>
           <div class="proj-tags"><span class="tag-sm">Voice input</span><span class="tag-sm">Adaptive follow-ups</span><span class="tag-sm">Hackathon</span></div>
           <a href="https://ai-interview-agent-delta-rust.vercel.app/" class="proj-link" target="_blank" rel="noopener noreferrer">Live Site →</a>
@@ -700,7 +700,7 @@
 
         <div class="proj-card reveal">
           <div class="proj-top"><div><div class="proj-icon">🤖</div><div class="proj-title">Agentic Data Analyst</div></div><span class="proj-badge"><span class="d"></span>LIVE</span></div>
-          <div class="proj-shot"><img src="assets/projects/agentic-data-analyst.png" alt="Screenshot of the Agentic Data Analyst workflow" width="1200" height="675" loading="lazy" onerror="this.parentNode.classList.add('is-missing'); this.remove();"></div>
+          <div class="proj-shot"><img src="assets/projects/agentic-data-analyst.png" alt="Screenshot of the Agentic Data Analyst workflow" width="949" height="560" loading="lazy" onerror="this.parentNode.classList.add('is-missing'); this.remove();"></div>
           <p class="proj-desc">An AI-powered tool that automates data analysis, built for my UptoSkills internship.</p>
           <div class="proj-tags"><span class="tag-sm">AI Agents</span><span class="tag-sm">Data Analysis</span></div>
           <a href="https://agentic-data-analyst-1-nxlf.onrender.com/" class="proj-link" target="_blank" rel="noopener noreferrer">Live Site →</a>
