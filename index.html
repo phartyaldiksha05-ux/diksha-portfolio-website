@@ -15,7 +15,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://diksha-portfolio-website-omega.vercel.app/">
 <link rel="canonical" href="https://diksha-portfolio-website-omega.vercel.app/">
-<meta name="theme-color" content="#08080D">
+<meta name="theme-color" content="#0d1117">
 
 <!-- Twitter/X card (harmless to include, some tools use it as fallback) -->
 <meta name="twitter:card" content="summary_large_image">
@@ -23,29 +23,26 @@
 <meta name="twitter:description" content="MCA graduate who built a live multilingual RAG chatbot serving 300+ students across 4 languages.">
 <meta name="twitter:image" content="https://diksha-portfolio-website-omega.vercel.app/assets/og-image.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234F46E5'/%3E%3Ctext x='32' y='42' font-family='Arial, Helvetica, sans-serif' font-size='28' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3EDP%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#08080D;
-    --bg-2:#0F0F17;
-    --card:#131320;
-    --card-2:#171724;
-    --line:#24243A;
-    --ink:#F3F3F8;
-    --ink-soft:#B7B7C9;
-    --slate:#7C7C93;
+    --bg:#0d1117;
+    --bg-2:#010409;
+    --card:#161b22;
+    --card-2:#1c2128;
+    --line:#30363d;
+    --ink:#e6edf3;
+    --ink-soft:#c9d1d9;
+    --slate:#8b949e;
 
-    --blue:#4D7CFF;
-    --blue-soft:#1B2340;
-    --pink:#FF4FA3;
-    --pink-soft:#3A1830;
-    --grad: linear-gradient(90deg, var(--blue), var(--pink));
+    --blue:#58a6ff;
+    --blue-soft:rgba(56,139,253,.15);
+    --pink:#a371f7;
+    --pink-soft:rgba(163,113,247,.15);
+    --grad: linear-gradient(90deg,#58a6ff,#a371f7);
 
-    --display:'Space Grotesk', 'Inter', sans-serif;
-    --body:'Inter', -apple-system, sans-serif;
-    --mono:'JetBrains Mono', ui-monospace, monospace;
+    --display:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    --body:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    --mono:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
 
     --maxw:1160px;
   }
@@ -87,7 +84,7 @@
   /* ---------------- NAV ---------------- */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(8,8,13,.78);
+    background:rgba(13,17,23,.78);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
@@ -107,9 +104,9 @@
   }
   .btn:active{transform:scale(.97);}
   .btn-primary{background:var(--grad); color:#fff;}
-  .btn-primary:hover{box-shadow:0 8px 26px rgba(255,79,163,.35); transform:translateY(-1px);}
+  .btn-primary:hover{box-shadow:0 8px 26px rgba(163,113,247,.35); transform:translateY(-1px);}
   .btn-ghost{border-color:var(--line); color:var(--ink);}
-  .btn-ghost:hover{border-color:var(--blue); background:rgba(77,124,255,.08);}
+  .btn-ghost:hover{border-color:var(--blue); background:rgba(88,166,255,.08);}
 
   .navtoggle{display:none; background:none; border:none; cursor:pointer; padding:6px;}
   .navtoggle span{display:block; width:22px; height:2px; background:var(--ink); margin:5px 0; transition:.2s;}
@@ -147,12 +144,12 @@
     position:absolute; left:14px; bottom:14px;
     display:inline-flex; align-items:center; gap:7px;
     font-family:var(--mono); font-size:11.5px; font-weight:500;
-    background:rgba(8,8,13,.78); backdrop-filter:blur(6px);
+    background:rgba(13,17,23,.78); backdrop-filter:blur(6px);
     color:var(--ink); border:1px solid rgba(255,255,255,.18);
     padding:7px 13px; border-radius:100px;
     transition:border-color .15s, background .15s;
   }
-  .shot-badge:hover{border-color:#2FE398; background:rgba(8,8,13,.92);}
+  .shot-badge:hover{border-color:#2FE398; background:rgba(13,17,23,.92);}
   .shot-badge .d{width:6px; height:6px; border-radius:50%; background:#2FE398; box-shadow:0 0 6px #2FE398;}
 
   /* ---------------- SECTION HEADS ---------------- */
@@ -167,8 +164,8 @@
   .skill-card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;}
   .skill-card .cat{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); margin-bottom:14px; display:block;}
   .pill-row{display:flex; flex-wrap:wrap; gap:8px;}
-  .pill{font-size:13px; font-weight:500; padding:7px 13px; border-radius:100px; background:var(--blue-soft); color:#9FB6FF; border:1px solid rgba(77,124,255,.25);}
-  .skill-card:nth-child(3n+2) .pill{background:var(--pink-soft); color:#FFA7CE; border-color:rgba(255,79,163,.25);}
+  .pill{font-size:13px; font-weight:500; padding:7px 13px; border-radius:100px; background:var(--blue-soft); color:#9FB6FF; border:1px solid rgba(88,166,255,.25);}
+  .skill-card:nth-child(3n+2) .pill{background:var(--pink-soft); color:#FFA7CE; border-color:rgba(163,113,247,.25);}
   .skill-card:nth-child(3n) .pill{background:#1C2E28; color:#7CE0B8; border-color:rgba(47,227,152,.25);}
 
   /* ---------------- EXPERIENCE ---------------- */
@@ -234,8 +231,8 @@
   /* ---------------- CONTACT ---------------- */
   .contact{position:relative; border-radius:28px; margin:0 28px; padding:2px; background:var(--grad); overflow:hidden;}
   .contact-inner-bg{background:var(--bg); border-radius:26px; padding:70px 48px; position:relative; overflow:hidden;}
-  .contact-inner-bg::before{content:''; position:absolute; right:-140px; top:-140px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(255,79,163,.28), transparent 70%);}
-  .contact-inner-bg::after{content:''; position:absolute; left:-140px; bottom:-140px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(77,124,255,.28), transparent 70%);}
+  .contact-inner-bg::before{content:''; position:absolute; right:-140px; top:-140px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(163,113,247,.28), transparent 70%);}
+  .contact-inner-bg::after{content:''; position:absolute; left:-140px; bottom:-140px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(88,166,255,.28), transparent 70%);}
   .contact-inner{position:relative; max-width:640px;}
   .contact h2{font-size:clamp(28px,3.8vw,42px); margin:14px 0 16px;}
   .contact p{color:var(--ink-soft); font-size:16px; margin-bottom:32px; max-width:480px;}
@@ -256,7 +253,7 @@
     box-shadow:0 12px 30px rgba(79,70,229,.45);
     transition:transform .2s ease;
   }
-  .fab::before{content:''; position:absolute; inset:-5px; border-radius:99px; border:2px solid rgba(255,79,163,.5); animation:fabPulse 2.4s ease-out infinite; pointer-events:none;}
+  .fab::before{content:''; position:absolute; inset:-5px; border-radius:99px; border:2px solid rgba(163,113,247,.5); animation:fabPulse 2.4s ease-out infinite; pointer-events:none;}
   @keyframes fabPulse{0%{transform:scale(.96);opacity:.9}100%{transform:scale(1.14);opacity:0}}
   .fab:hover{transform:translateY(-2px);}
   .fab-av{width:44px; height:44px; border-radius:50%; background:#fff; color:#4F46E5; display:grid; place-items:center; font-weight:800; font-size:14px; letter-spacing:.02em; flex:none;}
@@ -393,7 +390,7 @@
   .proj-card{position:relative; overflow:hidden;}
   .proj-card::before{content:''; position:absolute; inset:0; padding:1px; border-radius:inherit; background:var(--grad); opacity:0; transition:opacity .25s ease; -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none;}
   .proj-card:hover::before{opacity:1;}
-  .proj-card:hover{box-shadow:0 22px 44px rgba(0,0,0,.4), 0 0 0 1px rgba(255,79,163,.15);}
+  .proj-card:hover{box-shadow:0 22px 44px rgba(0,0,0,.4), 0 0 0 1px rgba(163,113,247,.15);}
   .proj-icon, .proj-top .proj-icon{transition:transform .35s ease;}
   .proj-card:hover .proj-icon{transform:scale(1.15) rotate(-6deg);}
   .tag-sm{transition:border-color .15s ease, color .15s ease, transform .15s ease;}
@@ -446,8 +443,8 @@
   .proj-shot::after{content:'Screenshot coming soon'; position:absolute; inset:0; display:grid; place-items:center; font-family:var(--mono); font-size:12px; color:var(--slate); z-index:0;}
   .arch{display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:14px 0 6px;}
   .arch-step{font-family:var(--mono); font-size:11.5px; padding:6px 10px; border-radius:8px; border:1px solid var(--line); background:var(--bg-2); color:var(--ink-soft);}
-  .arch-step.hl{border-color:rgba(77,124,255,.55); color:#9FB6FF;}
-  .arch-step.hl2{border-color:rgba(255,79,163,.55); color:#FFA7CE;}
+  .arch-step.hl{border-color:rgba(88,166,255,.55); color:#9FB6FF;}
+  .arch-step.hl2{border-color:rgba(163,113,247,.55); color:#FFA7CE;}
   .arch-arrow{color:var(--slate); font-size:12px;}
   .edu-secondary{padding:14px 18px;}
   .edu-secondary .deg{font-size:14.5px; color:var(--ink-soft); font-weight:600;}
@@ -463,6 +460,23 @@
   }
   .group-title{font-family:var(--display); font-size:20px; font-weight:700; margin:34px 0 18px;}
   .open-to{font-size:14px; color:var(--ink-soft); margin:12px 0 24px; max-width:560px;}
+
+  /* ---- v18: GitHub-style theme ---- */
+  .glow{display:none;}
+  .proj-card,.skill-card,.cert-card,.edu-card,.chip,.c-item,.c-form,.widget,.arch-step,.more-toggle,.btn{border-radius:6px;}
+  .btn-primary{background:#238636; color:#fff; border:1px solid rgba(240,246,252,.1); box-shadow:none;}
+  .btn-primary:hover{background:#2ea043;}
+  .btn-ghost{background:#21262d; border:1px solid #30363d; color:#c9d1d9;}
+  .btn-ghost:hover{background:#30363d; border-color:#8b949e;}
+  .skill-card .pill,.skill-card:nth-child(3n+2) .pill,.skill-card:nth-child(3n) .pill{background:rgba(56,139,253,.1); color:#58a6ff; border:1px solid rgba(56,139,253,.4);}
+  .fab{background:#238636; box-shadow:0 8px 24px rgba(1,4,9,.7);}
+  .fab::before{border-color:rgba(46,160,67,.5);}
+  .fab .fab-dot{border-color:#238636;}
+  .readme-card{background:#161b22; border:1px solid #30363d; border-radius:6px; overflow:hidden; max-width:520px; margin-left:auto;}
+  .readme-head{padding:10px 16px; border-bottom:1px solid #30363d; font-family:var(--mono); font-size:13px; color:#8b949e;}
+  .readme-code{margin:0; padding:18px 16px; font-family:var(--mono); font-size:13.5px; line-height:1.8; color:#c9d1d9; background:#0d1117; overflow-x:auto;}
+  .readme-foot{padding:12px 16px; border-top:1px solid #30363d; font-size:13px; color:#8b949e;}
+  .readme-foot a{color:#58a6ff;}
 </style>
 <script type="application/ld+json">
 {
@@ -536,13 +550,19 @@
         </div>
       </div>
 
-      <!-- Signature visual: a real screenshot of the live chatbot, not a mockup -->
       <div class="hero-visual">
-        <div class="glow blue"></div>
-        <div class="glow pink"></div>
-        <div class="chat-shot">
-          <img width="762" height="449" loading="lazy" src="assets/chatbot-live-preview.png" alt="Screenshot of Diksha's live multilingual RAG chatbot answering student questions on the GBPIET website">
-          <a href="https://gbpiet.ac.in" target="_blank" rel="noopener noreferrer" class="shot-badge"><span class="d"></span>LIVE on gbpiet.ac.in →</a>
+        <div class="readme-card">
+          <div class="readme-head"><span aria-hidden="true">📄</span> README.md</div>
+<pre class="readme-code"><code>name       : Diksha Phartyal
+status     : Fresher, MCA graduate (2026)
+location   : Ramnagar, Uttarakhand, India
+education  : MCA, GBPIET (CGPA 8.28)
+interests  : Software · Backend · Data · QA
+learning   : Playwright, pytest, Postman
+open_to    : Associate Software Developer,
+             Backend Developer, Data Analyst,
+             QA Automation</code></pre>
+          <div class="readme-foot"><a href="https://github.com/phartyaldiksha05-ux" target="_blank" rel="noopener noreferrer">github.com/phartyaldiksha05-ux</a> · <a href="https://gbpiet.ac.in" target="_blank" rel="noopener noreferrer">Live chatbot: gbpiet.ac.in</a></div>
         </div>
       </div>
     </div>
